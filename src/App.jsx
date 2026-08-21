@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Kids from "./components/Kids";
+import KidsZone from "./components/KidsZone";
+import Quiz from "./components/Quiz";
 import Parents from "./components/Parents";
 
 import "./App.css";
@@ -35,6 +37,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/kids" element={<Kids />} />
+            <Route path="/kids-zone" element={<KidsZone />} />
+            <Route path="/quiz" element={<Quiz />} />
             <Route path="/parents" element={<Parents />} />
           </Routes>
         </main>

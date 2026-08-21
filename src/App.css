@@ -32,8 +32,8 @@ body {
   justify-content: space-between;
   align-items: center;
 
-   background-color: #3d3200;
-  color: white;
+  background-color: teal;
+  color: black;
 }
 
 /* NAVIGATION */
@@ -44,7 +44,7 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color:white;
+  color:black;
   font-weight: bold;
   padding: 10px 18px;
   border-radius: 25px;
@@ -52,7 +52,7 @@ body {
 
 .navbar a:hover {
   background-color: #3d3200;
-  color: blue;
+  color: white;
 }
 
 /* CONTENT */
@@ -137,6 +137,6 @@ body {
 
   text-align: center;
 
-  background-color: #3d3200;
-  color: white;
+  background-color:teal ;
+  color: black;
 }

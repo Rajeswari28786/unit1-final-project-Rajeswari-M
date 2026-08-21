@@ -1,42 +1,84 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Kids() {
+  const [kidsName, setKidsName] = useState("");
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const enteredName = kidsName.trim();
+
+    if (!enteredName) {
+      setError("Please enter your name.");
+      return;
+    }
+
+    const savedUsers = localStorage.getItem("brainyBeeUsers");
+
+    if (!savedUsers) {
+      setError(
+        "No registered users found. Please ask your parent to create an account."
+      );
+      return;
+    }
+
+    const users = JSON.parse(savedUsers);
+
+    const registeredKid = users.find(
+      (user) =>
+        user.kidsName &&
+        user.kidsName.toLowerCase() === enteredName.toLowerCase()
+    );
+
+    if (registeredKid) {
+      localStorage.setItem(
+        "currentKid",
+        JSON.stringify(registeredKid)
+      );
+
+      navigate("/kids-zone");
+    } else {
+      setError(
+        "Sorry, this name is not registered. Please ask your parent to create an account."
+      );
+    }
+  };
+
   return (
-    <div className="kids-page">
-      <h1>Welcome to the Kids Zone!</h1>
-      <p>Choose an activity and have fun playing!</p>
+    <div className="kids-login">
 
-      <div className="activity-container">
+      <h1>🐝 Welcome to Kids Zone! 🐝</h1>
 
-        <Link to="/quiz" className="activity-card">
-          <img
-            src="/images/quiz.png"
-            alt="Quizzes"
-          />
-          <h2>Quizzes</h2>
-          <p>Test your knowledge with fun quizzes!</p>
-        </Link>
+      <p>Enter your name to get started.</p>
 
-        <Link to="/puzzles" className="activity-card">
-          <img
-            src="/images/puzzle.png"
-            alt="Puzzles"
-          />
-          <h2>Puzzles</h2>
-          <p>Challenge your brain with exciting puzzles!</p>
-        </Link>
+      <form onSubmit={handleSubmit}>
 
-        <Link to="/memory-games" className="activity-card">
-          <img
-            src="/images/memory.png"
-            alt="Memory Games"
-          />
-          <h2>Memory Games</h2>
-          <p>Improve your memory while having fun!</p>
-        </Link>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={kidsName}
+          onChange={(event) => {
+            setKidsName(event.target.value);
+            setError("");
+          }}
+        />
 
-      </div>
+        <button type="submit">
+          Enter Kids Zone
+        </button>
+
+      </form>
+
+      {error && (
+        <p className="error-message">
+          {error}
+        </p>
+      )}
+
     </div>
   );
 }
