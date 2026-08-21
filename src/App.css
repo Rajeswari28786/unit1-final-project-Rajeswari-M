@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 20px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+   background-color: #3d3200;
+  color: white;
+}
+
+/* NAVIGATION */
+.navbar {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 25px;
+}
+
+.navbar a:hover {
+  background-color: #3d3200;
+  color: blue;
+}
+
+/* CONTENT */
+.content {
+  width: 100%;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* LANDING PAGE */
+.home {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+/* IMAGE */
+.bee-banner {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background-image: url("/images/bees.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+
+/* TEXT ON IMAGE */
+.welcome-text {
+  position: absolute;
+
+  top: 50%;
+  left: 35%;
+
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+
+  text-align:center;
+  color: white;
+
+  text-shadow: 2px 2px 6px black;
+
+  z-index: 2;
+}
+
+.welcome-text h2 {
+  margin: 0 0 15px;
+  font-size: 42px;
+  text-align:center;
+}
+
+.welcome-text p {
+  margin: 0;
+  font-size: 22px;
+  text-align:center;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+
+  flex-shrink: 0;
+
+  text-align: center;
+
+  background-color: #3d3200;
+  color: white;
+}
