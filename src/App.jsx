@@ -7,6 +7,7 @@ import Kids from "./components/Kids";
 import KidsZone from "./components/KidsZone";
 import Quiz from "./components/Quiz";
 import Puzzle from "./components/Puzzle";
+import MemoryGame from "./components/MemoryGame";
 import Parents from "./components/Parents";
 
 import "./App.css";
@@ -41,6 +42,7 @@ function App() {
             <Route path="/kids-zone" element={<KidsZone />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/puzzle" element={<Puzzle />} />
+            <Route path="/memory" element={<MemoryGame />} />
             <Route path="/parents" element={<Parents />} />
           </Routes>
         </main>

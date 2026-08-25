@@ -140,9 +140,10 @@ return newTime;
 
           <p>Test your memory!</p>
 
-          <button>
-            Play Memory
+          <button onClick={() => navigate("/memory")}>
+           Play Memory
           </button>
+
 
         </div>
 
