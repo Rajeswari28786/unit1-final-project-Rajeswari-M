@@ -125,9 +125,10 @@ return newTime;
 
           <p>Challenge your brain!</p>
 
-          <button>
-            Play Puzzle
+          <button onClick={() => navigate("/puzzle")}>
+           Play Puzzle
           </button>
+
 
         </div>
 
