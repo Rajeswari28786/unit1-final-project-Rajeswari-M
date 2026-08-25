@@ -38,7 +38,7 @@ function About() {
     <div className="about-page">
 
       <div className="about-info">
-        <h1>About Brainy Bee Kids</h1>
+        <h1>ABOUT</h1>
 
         <p>
           Brainy Bee Kids is a fun and interactive gaming platform
@@ -46,23 +46,17 @@ function About() {
         </p>
 
         <p>
-          Our goal is to help kids learn through quizzes, puzzles,
-          and memory games.
+          Our goal is to make kids play through quizzes, puzzles,
+          and memory games inorder to have fun and to improve their skills.
         </p>
 
-        <h2>What We Offer</h2>
-
-        <ul>
-          <li>Quizzes</li>
-          <li>Puzzles</li>
-          <li>Memory Games</li>
-          <li>Screen time information</li>
-        </ul>
+        <p> This also helps the parents to monitor their kids screening time and the progress. </p>
       </div>
 
       <div className="account-form">
 
-        <h1>Create an Account</h1>
+        <h1>SIGN UP</h1>
+        <h2>Sign up here to create an account</h2>
 
         <form onSubmit={handleSubmit}>
 
@@ -73,14 +67,14 @@ function About() {
             placeholder="Enter your full name"
             value={userName}
             onChange={(event) => setUserName(event.target.value)}
-          />
+          /> <br></br>
 
           <label>Email</label>
 
           <input
             type="email"
             placeholder="Enter your email"
-          />
+          /><br></br>
 
           <label>Kids Name</label>
 
@@ -89,21 +83,21 @@ function About() {
             placeholder="Enter your kids full name"
             value={kidsName}
             onChange={(event) => setKidsName(event.target.value)}
-          />
+          /><br></br>
 
           <label>Password</label>
 
           <input
             type="password"
             placeholder="Create a password"
-          />
+          /><br></br>
 
           <label>Confirm Password</label>
 
           <input
             type="password"
             placeholder="Confirm your password"
-          />
+          /><br></br>
 
           <button type="submit">
             Create Account

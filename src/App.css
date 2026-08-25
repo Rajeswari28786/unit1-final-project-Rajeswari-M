@@ -100,17 +100,15 @@ body {
 .welcome-text {
   position: absolute;
 
-  top: 50%;
-  left: 35%;
+  top:50%;
+  left:40%;
 
   transform: translate(-50%, -50%);
 
   width: 90%;
 
   text-align:center;
-  color: white;
 
-  text-shadow: 2px 2px 6px black;
 
   z-index: 2;
 }

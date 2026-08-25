@@ -9,7 +9,6 @@ function Home() {
 
         <div className="welcome-text">
           <h2>Welcome to Brainy Bee Kids!</h2>
-          <p>A fun place where kids can learn, play and grow!</p>
         </div>
       </div>
 

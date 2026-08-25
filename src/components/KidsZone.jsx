@@ -103,8 +103,9 @@ return newTime;
 
         {/* Quiz */}
         <div className="game-card">
+        <img src="/images/quiz.png" alt="Quiz" width={200} height={200} />
 
-          <h2>🧠 Quiz</h2>
+          <h2>Quiz</h2>
 
           <p>Test your knowledge!</p>
 
@@ -118,8 +119,9 @@ return newTime;
 
         {/* Puzzle */}
         <div className="game-card">
+          <img src="/images/puzzle.png" alt="Puzzle" width={200} height={200} />
 
-          <h2>🧩 Puzzle</h2>
+          <h2>Puzzle</h2>
 
           <p>Challenge your brain!</p>
 
@@ -131,8 +133,9 @@ return newTime;
 
         {/* Memory Game */}
         <div className="game-card">
+          <img src="/images/memory.png" alt="Memory" width={200} height={200} />
 
-          <h2>🃏 Memory Game</h2>
+          <h2>Memory Game</h2>
 
           <p>Test your memory!</p>
 

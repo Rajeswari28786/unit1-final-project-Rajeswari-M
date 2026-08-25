@@ -92,7 +92,7 @@ function Parents() {
   return (
     <div className="parent-login">
 
-      <h1>👨‍👩‍👧 Parents Login</h1>
+      <h1>👨‍👩‍👧 Parents Dashboard</h1>
 
       <p>
         Enter your registered name to check your child's progress.

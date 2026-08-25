@@ -3,29 +3,29 @@ import React, { useState } from "react";
 function Quiz() {
   const questions = [
     {
-      question: "What is 2 + 2?",
-      options: ["3", "4", "5", "6"],
-      answer: "4",
+      question: "How many countries had the World Cup games this year?",
+      options: ["1", "2", "4", "3"],
+      answer: "3",
     },
     {
-      question: "Which animal says Moo?",
-      options: ["Dog", "Cat", "Cow", "Lion"],
-      answer: "Cow",
+      question: "What will the winning team get?",
+      options: ["a trophy", "hats", "ribbons", "crown"],
+      answer: "a trophy",
     },
     {
-      question: "What color is a banana?",
-      options: ["Blue", "Yellow", "Green", "Purple"],
+      question: "Which of these is NOT a color on the World Cup ball?",
+      options: ["red", "Yellow", "Green", "blue"],
       answer: "Yellow",
     },
     {
-      question: "How many legs does a dog have?",
+      question: "The World Cup happens every ______ years?",
       options: ["2", "4", "6", "8"],
       answer: "4",
     },
     {
-      question: "Which one is a fruit?",
-      options: ["Carrot", "Apple", "Potato", "Onion"],
-      answer: "Apple",
+      question: "Which team won the 2026 World Cup?",
+      options: ["Argentina", "Spain", "France", "England"],
+      answer: "Spain",
     },
   ];
 
@@ -87,7 +87,7 @@ function Quiz() {
   return (
     <div className="quiz-page">
 
-      <h1>🧠 Brainy Bee Kids Quiz 🐝</h1>
+      <h1> 🐝 Brainy Bee Kids Quiz 🐝</h1>
 
       <p>Choose the correct answer for each question!</p>
 
