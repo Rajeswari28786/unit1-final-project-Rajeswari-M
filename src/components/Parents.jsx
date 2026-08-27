@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Parents.css";
 
 function Parents() {
   const [userName, setUserName] = useState("");
@@ -90,6 +91,7 @@ function Parents() {
   }
 
   return (
+    <div className="parents-page">
     <div className="parent-login">
 
       <h1>Parents Dashboard</h1>
@@ -124,6 +126,7 @@ function Parents() {
         </p>
       )}
 
+    </div>
     </div>
   );
 }
