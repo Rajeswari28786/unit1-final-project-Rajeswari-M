@@ -1,0 +1,153 @@
+
+.kids-zone {
+  min-height: 100vh;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  background-color: lightblue;
+
+  font-family: Arial, sans-serif;
+
+  text-align: center;
+}
+
+
+.kids-zone h1 {
+  margin: 0 0 10px;
+
+  color: #2c7da0;
+
+  font-size: 32px;
+}
+
+.kids-zone > p {
+  margin-bottom: 30px;
+
+  color: #555;
+
+  font-size: 18px;
+}
+
+
+.screen-time {
+  width: 300px;
+
+  margin: 0 auto 35px;
+
+  padding: 20px;
+
+  background-color: aliceblue;
+
+  border-radius: 10px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.screen-time h2 {
+  margin: 0 0 10px;
+
+  color: #2a9d8f;
+
+  font-size: 20px;
+}
+
+.screen-time p {
+  margin: 0;
+
+  color: #333;
+
+  font-size: 18px;
+
+  font-weight: bold;
+}
+
+
+.games {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+
+.game-card {
+  padding: 20px;
+
+  background-color: aliceblue;
+
+  border-radius: 10px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+}
+
+
+/* Game image */
+
+.game-card img {
+  width: 200px;
+
+  height: 200px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+
+/* Game title */
+
+.game-card h2 {
+  margin: 15px 0 8px;
+
+  color: #2c7da0;
+
+  font-size: 22px;
+}
+
+
+/* Game description */
+
+.game-card p {
+  margin-bottom: 20px;
+
+  color: #555;
+
+  font-size: 15px;
+}
+
+
+/* Game button */
+
+.game-card button {
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background-color: #2a9d8f;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* Button hover */
+
+.game-card button:hover {
+  background-color: #21867a;
+}
