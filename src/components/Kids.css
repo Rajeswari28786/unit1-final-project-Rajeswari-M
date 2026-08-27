@@ -1,0 +1,115 @@
+/* Kids Zone page */
+
+.kids-login {
+  width: 400px;
+
+  margin: 100px auto;
+
+  padding: 40px;
+
+  background-color: #fff;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  text-align: center;
+
+  font-family: Arial, sans-serif;
+}
+
+
+/* Heading */
+
+.kids-login h1 {
+  margin-bottom: 15px;
+
+  color: #f4a261;
+
+  font-size: 28px;
+}
+
+
+/* Description */
+
+.kids-login p {
+  margin-bottom: 25px;
+
+  color: #555;
+
+  font-size: 16px;
+}
+
+
+/* Form */
+
+.kids-login form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* Input */
+
+.kids-login input {
+  padding: 12px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+
+/* Input focus */
+
+.kids-login input:focus {
+  border-color: #2a9d8f;
+}
+
+
+/* Button */
+
+.kids-login button {
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background-color: #2a9d8f;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* Button hover */
+
+.kids-login button:hover {
+  background-color: #21867a;
+}
+
+
+/* Error message */
+
+.kids-login .error-message {
+  margin-top: 20px;
+
+  margin-bottom: 0;
+
+  color: #d62828;
+
+  font-size: 14px;
+}
