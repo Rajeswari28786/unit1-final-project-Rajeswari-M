@@ -1,13 +1,24 @@
-/* Kids Zone page */
+
+.kids-page{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+
+  background-color: lightblue;
+
+  font-family: Arial, sans-serif;
+}
+
 
 .kids-login {
   width: 400px;
 
-  margin: 100px auto;
+  margin: 0 auto;
 
-  padding: 40px;
+  padding: 50px;
 
-  background-color: #fff;
+  background-color: aliceblue;
 
   border-radius: 10px;
 
@@ -19,6 +30,7 @@
 }
 
 
+
 /* Heading */
 
 .kids-login h1 {
@@ -27,6 +39,7 @@
   color: #f4a261;
 
   font-size: 28px;
+  white-space: nowrap;
 }
 
 

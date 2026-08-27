@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Kids.css";
 
 function Kids() {
   const [kidsName, setKidsName] = useState("");
@@ -49,6 +50,7 @@ function Kids() {
   };
 
   return (
+    <div className="kids-page">
     <div className="kids-login">
 
       <h1>🐝 Welcome to Kids Zone! 🐝</h1>
@@ -79,6 +81,7 @@ function Kids() {
         </p>
       )}
 
+    </div>
     </div>
   );
 }
