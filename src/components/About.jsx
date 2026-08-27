@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./About.css";
 
 function About() {
   const [userName, setUserName] = useState("");

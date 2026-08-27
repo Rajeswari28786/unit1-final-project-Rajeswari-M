@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./KidsZone.css";
 
 // ==============================
 // Reusable Child Component
