@@ -41,8 +41,7 @@ function About() {
         <h1>ABOUT</h1>
 
         <p>
-          Brainy Bee Kids is a fun and interactive gaming platform
-          designed especially for children.
+          Brainy Bee Kids is a gaming app designed to help children learn with fun.
         </p>
 
         <p>
@@ -50,7 +49,7 @@ function About() {
           and memory games inorder to have fun and to improve their skills.
         </p>
 
-        <p> This also helps the parents to monitor their kids screening time and the progress. </p>
+        <p> It also helps parents monitor their children’s screen time and track their progress. </p>
       </div>
 
       <div className="account-form">

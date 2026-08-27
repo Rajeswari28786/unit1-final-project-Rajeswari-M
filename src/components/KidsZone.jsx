@@ -1,17 +1,86 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function KidsZone() {
+// ==============================
+// Reusable Child Component
+// ==============================
+function GameCard({ title, description, image, path }) {
   const navigate = useNavigate();
 
+  return (
+    <div className="game-card">
+      <img
+        src={image}
+        alt={title}
+        width={200}
+        height={200}
+      />
+
+      <h2>{title}</h2>
+
+      <p>{description}</p>
+
+      <button onClick={() => navigate(path)}>
+        Play {title}
+      </button>
+    </div>
+  );
+}
+
+// ==============================
+// Reusable Component
+// ==============================
+function ScreenTime({ screenTime }) {
+  const minutes = Math.floor(screenTime / 60);
+  const seconds = screenTime % 60;
+
+  return (
+    <div className="screen-time">
+      <h2>Your Screen Time</h2>
+
+      <p>
+        {minutes} minutes {seconds} seconds
+      </p>
+    </div>
+  );
+}
+
+// ==============================
+// Parent Component
+// ==============================
+function KidsZone() {
   const [screenTime, setScreenTime] = useState(0);
 
+  // Get current kid from localStorage
   const savedKid = localStorage.getItem("currentKid");
 
   const currentKid = savedKid
     ? JSON.parse(savedKid)
     : null;
 
+  // Game data
+  const games = [
+    {
+      title: "Quiz",
+      description: "Test your knowledge!",
+      image: "/images/quiz.png",
+      path: "/quiz",
+    },
+    {
+      title: "Puzzle",
+      description: "Challenge your brain!",
+      image: "/images/puzzle.png",
+      path: "/puzzle",
+    },
+    {
+      title: "Memory Game",
+      description: "Test your memory!",
+      image: "/images/memory.png",
+      path: "/memory",
+    },
+  ];
+
+  // React Hook
   useEffect(() => {
     if (!currentKid) {
       return;
@@ -26,6 +95,7 @@ function KidsZone() {
       ? parseInt(savedTime)
       : 0;
 
+    // Set initial screen time
     setScreenTime(startingTime);
 
     // Start timer
@@ -33,119 +103,75 @@ function KidsZone() {
       setScreenTime((previousTime) => {
         const newTime = previousTime + 1;
 
-        // Save screen time
+        // Save screen time for current kid
         localStorage.setItem(
-  `screenTime-${currentKid.kidsName}`,
-  newTime.toString()
-);
+          `screenTime-${currentKid.kidsName}`,
+          newTime.toString()
+        );
 
-// Update parent information
-const savedUsers =
-  localStorage.getItem("brainyBeeUsers");
+        // Update parent user information
+        const savedUsers =
+          localStorage.getItem("brainyBeeUsers");
 
-if (savedUsers) {
-  const users = JSON.parse(savedUsers);
+        if (savedUsers) {
+          const users = JSON.parse(savedUsers);
 
-  const updatedUsers = users.map((user) => {
-    if (user.kidsName === currentKid.kidsName) {
-      return {
-        ...user,
-        screenTime: newTime,
-      };
-    }
+          const updatedUsers = users.map((user) => {
+            if (
+              user.kidsName === currentKid.kidsName
+            ) {
+              return {
+                ...user,
+                screenTime: newTime,
+              };
+            }
 
-    return user;
-  });
+            return user;
+          });
 
-  localStorage.setItem(
-    "brainyBeeUsers",
-    JSON.stringify(updatedUsers)
-  );
-}
+          localStorage.setItem(
+            "brainyBeeUsers",
+            JSON.stringify(updatedUsers)
+          );
+        }
 
-return newTime;
+        return newTime;
       });
     }, 1000);
 
-    // Stop timer when leaving the page
+    // Cleanup timer
     return () => {
       clearInterval(timer);
     };
   }, []);
 
-  // Convert seconds into minutes and seconds
-  const minutes = Math.floor(screenTime / 60);
-  const seconds = screenTime % 60;
-
   return (
     <div className="kids-zone">
 
       <h1>
-        🎉 Welcome, {currentKid?.kidsName || "Friend"}! 🎉
+        Welcome,{" "}
+        {currentKid?.kidsName || "Friend"}! 
       </h1>
 
       <p>
-        Get ready to learn, play and have fun!
+        Get ready to learn, play and grow!
       </p>
 
-      {/* Screen Time */}
-      <div className="screen-time">
+      {/* Reusable component */}
+      <ScreenTime screenTime={screenTime} />
 
-        <h2>⏱️ Your Screen Time</h2>
-
-        <p>
-          {minutes} minutes {seconds} seconds
-        </p>
-
-      </div>
-
+      {/* Game Cards */}
       <div className="games">
 
-        {/* Quiz */}
-        <div className="game-card">
-        <img src="/images/quiz.png" alt="Quiz" width={200} height={200} />
-
-          <h2>Quiz</h2>
-
-          <p>Test your knowledge!</p>
-
-          <button
-            onClick={() => navigate("/quiz")}
-          >
-            Play Quiz
-          </button>
-
-        </div>
-
-        {/* Puzzle */}
-        <div className="game-card">
-          <img src="/images/puzzle.png" alt="Puzzle" width={200} height={200} />
-
-          <h2>Puzzle</h2>
-
-          <p>Challenge your brain!</p>
-
-          <button onClick={() => navigate("/puzzle")}>
-           Play Puzzle
-          </button>
-
-
-        </div>
-
-        {/* Memory Game */}
-        <div className="game-card">
-          <img src="/images/memory.png" alt="Memory" width={200} height={200} />
-
-          <h2>Memory Game</h2>
-
-          <p>Test your memory!</p>
-
-          <button onClick={() => navigate("/memory")}>
-           Play Memory
-          </button>
-
-
-        </div>
+        {games.map((game) => (
+          <GameCard
+            key={game.title}
+            title={game.title}
+            description={game.description}
+            image={game.image}
+            path={game.path}
+          />
+        ))}
 
       </div>
 

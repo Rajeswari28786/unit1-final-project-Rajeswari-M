@@ -13,22 +13,22 @@ function Puzzle() {
     {
       id: 1,
       name: "Piece 1",
-      image: "/images/yellow-piece.png",
+      image: "/images/piece-1.png",
     },
     {
       id: 2,
       name: "Piece 2",
-      image: "/images/blue-piece.png",
+      image: "/images/piece-2.png",
     },
     {
       id: 3,
       name: "Piece 3",
-      image: "/images/green-piece.png",
+      image: "/images/piece-3.png",
     },
     {
       id: 4,
       name: "Piece 4",
-      image: "/images/purple-piece.png",
+      image: "/images/piece-4.png",
     },
   ];
 
@@ -116,7 +116,7 @@ function Puzzle() {
   return (
     <div className="puzzle-page">
 
-      <h1>Jigsaw Puzzle</h1>
+      <h1>Image Puzzle</h1>
 
       <p>Drag each piece into the correct place!</p>
 

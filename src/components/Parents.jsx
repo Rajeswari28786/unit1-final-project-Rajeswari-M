@@ -45,13 +45,13 @@ function Parents() {
     return (
       <div className="parent-dashboard">
 
-        <h1>👋 Welcome, {parent.userName}!</h1>
+        <h1>Welcome, {parent.userName}!</h1>
 
         <h2>Parent Dashboard</h2>
 
         <div className="child-info">
 
-          <h2>👧 Kids Information</h2>
+          <h2>Kids Information</h2>
 
           <p>
             <strong>Kids Name:</strong>{" "}
@@ -59,7 +59,7 @@ function Parents() {
           </p>
 
           <p>
-  <strong>⏱️ Screen Time:</strong>{" "}
+  <strong>Screen Time:</strong>{" "}
   {parent.screenTime
     ? `${Math.floor(parent.screenTime / 60)} minutes ${
         parent.screenTime % 60
@@ -68,7 +68,7 @@ function Parents() {
 </p>
 
           <p>
-            <strong>🧠 Quiz Score:</strong>{" "}
+            <strong>Quiz Score:</strong>{" "}
             {parent.quizScore !== undefined
               ? `${parent.quizScore}/5`
               : "No quiz completed yet"}
@@ -92,7 +92,7 @@ function Parents() {
   return (
     <div className="parent-login">
 
-      <h1>👨‍👩‍👧 Parents Dashboard</h1>
+      <h1>Parents Dashboard</h1>
 
       <p>
         Enter your registered name to check your child's progress.

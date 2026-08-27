@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 function MemoryGame() {
   const navigate = useNavigate();
 
-  // 2 pairs = 4 cards
   const initialCards = [
     {
       id: 1,
@@ -177,16 +176,14 @@ function MemoryGame() {
             You found all the matching pictures!
           </p>
 
-          <button onClick={restartGame}>
-            🔄 Play Again
-          </button>
+         
 
           <button
             onClick={() =>
               navigate("/kids-zone")
             }
           >
-            ⬅️ Back to Kids Zone
+            Back to Kids Zone
           </button>
 
         </div>

@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Quiz() {
+
+  function Quiz() {
+  const navigate = useNavigate();
+
   const questions = [
+
     {
       question: "How many countries had the World Cup games this year?",
       options: ["1", "2", "4", "3"],
@@ -141,21 +146,28 @@ function Quiz() {
 
           {score === questions.length && (
             <p>
-              🌟 Amazing! You got all the answers correct!
+              Amazing! You got all the answers correct!
             </p>
           )}
 
           {score >= 3 && score < questions.length && (
             <p>
-              👏 Great job! Keep learning!
+              👏 Great job! Keep playing!
             </p>
           )}
 
           {score < 3 && (
             <p>
-              💪 Good try! Keep practicing!
+              Good try! Keep practicing!
             </p>
           )}
+          <button
+            onClick={() =>
+              navigate("/kids-zone")
+            }
+          >
+            Back to Kids Zone
+          </button>
 
         </div>
       )}
