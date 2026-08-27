@@ -141,30 +141,21 @@
 }
 
 
-/* =========================
-   Parent Dashboard
-========================= */
-
 .parent-dashboard {
-  width: 600px;
+  width: 100%;
 
-  margin: 60px auto;
+  min-height: 100vh;
 
-  padding: 35px;
+  margin: 0;
+
+  padding: 40px;
 
   box-sizing: border-box;
 
-  background-color: aliceblue;
-
-  border-radius: 10px;
-
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-
-  font-family: Arial, sans-serif;
+  background-color: lightblue;
 
   text-align: center;
 }
-
 
 /* Dashboard headings */
 
@@ -189,12 +180,13 @@
 
   margin-bottom: 25px;
 
-  background-color: white;
+  background-color: aliceblue;
 
   border-radius: 8px;
 
   text-align: left;
 }
+
 
 
 /* Child information heading */
@@ -239,7 +231,7 @@
 
   border-radius: 5px;
 
-  background-color: #d62828;
+  background-color: #21867a;
 
   color: white;
 
@@ -253,6 +245,4 @@
 
 /* Logout hover */
 
-.parent-dashboard button:hover {
-  background-color: #b71c1c;
-}
+
