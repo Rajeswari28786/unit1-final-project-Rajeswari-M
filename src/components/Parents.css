@@ -242,7 +242,114 @@
   cursor: pointer;
 }
 
+/* =========================
+   Tablet View
+   768px and below
+========================= */
 
-/* Logout hover */
+@media (max-width: 768px) {
+
+  .parent-dashboard {
+    width: 100%;
+
+    padding: 30px 20px;
+  }
+
+  .parent-dashboard h1 {
+    font-size: 26px;
+  }
+
+  .parent-dashboard > h2 {
+    font-size: 20px;
+  }
+
+  .child-info {
+    width: 90%;
+
+    padding: 20px;
+  }
+  .parent-login {
+    width: 90%;
+
+    margin: 0 auto;
+
+    padding: 30px 20px;
+  }
+
+}
+
+
+/* =========================
+   Mobile View
+   480px and below
+========================= */
+
+@media (max-width: 480px) {
+
+  .parent-dashboard {
+    width: 100%;
+
+    padding: 25px 15px;
+  }
+
+  .parent-dashboard h1 {
+    font-size: 22px;
+
+    white-space: normal;
+  }
+
+  .parent-dashboard > h2 {
+    font-size: 18px;
+  }
+
+  .child-info {
+    width: 100%;
+
+    padding: 15px;
+  }
+
+  .child-info h2 {
+    font-size: 18px;
+  }
+
+  .child-info p {
+    font-size: 14px;
+  }
+
+  .parent-dashboard button {
+    width: 100%;
+
+    padding: 12px;
+  }
+  .parent-login {
+    width: 95%;
+
+    padding: 25px 15px;
+  }
+
+  .parent-login h1 {
+    font-size: 24px;
+
+    white-space: normal;
+  }
+
+}
+.parent-login,
+.parent-dashboard {
+  animation: fadeIn 0.10s ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 

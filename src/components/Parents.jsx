@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Parents.css";
+import Button from "./Button";
+
 
 function Parents() {
   const [userName, setUserName] = useState("");
@@ -77,14 +79,14 @@ function Parents() {
 
         </div>
 
-        <button
-          onClick={() => {
-            setParent(null);
-            setUserName("");
-          }}
-        >
-          Logout
-        </button>
+       <Button
+       text="Logout"
+       onClick={() => {
+       setParent(null);
+       setUserName("");
+       }}
+       />
+
 
       </div>
     );
@@ -114,9 +116,11 @@ function Parents() {
           }}
         />
 
-        <button type="submit">
-          Login
-        </button>
+        <Button
+        text="Login"
+        type="submit"
+        />
+
 
       </form>
 
