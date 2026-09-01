@@ -149,7 +149,7 @@ function Puzzle() {
                 />
               ) : (
                 <span>
-                  Drop Piece {position} Here
+                  Drop Piece Here
                 </span>
               )}
             </div>
